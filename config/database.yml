@@ -84,3 +84,16 @@ production:
   database: furima_app_production
   username: furima_app
   password: <%= ENV['FURIMA_APP_DATABASE_PASSWORD'] %>
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: furima_app
+  username: kyouya
+  password: kyouya
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: furima_app
