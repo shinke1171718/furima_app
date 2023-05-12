@@ -11,6 +11,20 @@
   </head>
 
   <body>
+   <header>
+      <% if !current_page?(new_user_session_path) %>
+        <nav class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">ホームへ戻る</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">マイページ</a>
+            </li>
+          </ul>
+        </nav>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
