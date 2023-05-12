@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :items
+  root to: 'items#index'
+
+  get 'users', to: 'users#index', as: 'users_index'
 
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'item#index'
+  resources :items
+
 end
