@@ -1,3 +1,16 @@
 <h1><%= current_user.name %>さんのマイページ</h1>
 
-<%= link_to 'ユーザー情報の編集', edit_user_registration_path %>
+<div class = "user_information">
+  <div class = "information_list">
+    <%= link_to 'ユーザー情報の編集', edit_user_registration_path %>
+  </div>
+  <div class = "information_list">
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  </div>
+  <div class = "information_list">
+    購入済みの商品一覧（未実装）
+  </div>
+  <div class = "information_list">
+    出品中の商品一覧（未実装）
+  </div>
+</div>
